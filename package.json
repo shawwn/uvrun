@@ -1,6 +1,6 @@
 {
   "name": "uv-run",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Tim Caswell <tim@creationix.com>",
   "main": "build/Release/uvrun.node",
   "repository": {
