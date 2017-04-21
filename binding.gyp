@@ -2,6 +2,9 @@
   "targets": [
     {
       "target_name": "uvrun",
+      'target_defaults': {
+        'default_configuration': 'Release'
+      },
       "sources": ["uvrun.cc"],
       "include_dirs": [
         "<!(node -e \"require('nan')\")"
