@@ -42,12 +42,12 @@ NAN_METHOD(RunNoWait) {
 #define Sleep(x) usleep((x)*1000)
 #endif
 NAN_METHOD(DoSleep) {
-  unsigned int ms = info[0]->Uint32Value();
+  unsigned int ms = Nan::To<unsigned int>(info[0]).FromJust();
   Sleep(ms);
 }
 
 NAN_METHOD(yield) {
-  unsigned int ms = info[0]->Uint32Value();
+  unsigned int ms = Nan::To<unsigned int>(info[0]).FromJust();
   if (ms > 0) {
     Sleep(ms);
   }
